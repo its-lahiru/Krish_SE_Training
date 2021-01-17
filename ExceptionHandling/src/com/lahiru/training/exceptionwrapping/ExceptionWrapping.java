@@ -15,6 +15,7 @@ public class ExceptionWrapping {
     public void readFile(){
         try {
             new FileInputStream("C:/Users/awlsa/Desktop/Virtusa LP training/ExceptionHandling/src/ExceptionWrapping/TextFile.txt");
+            System.out.println("file found");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
