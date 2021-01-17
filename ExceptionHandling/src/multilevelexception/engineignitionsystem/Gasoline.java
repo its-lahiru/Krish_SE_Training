@@ -1,16 +1,19 @@
 package multilevelexception.engineignitionsystem;
 
 import multilevelexception.exception.LowGasolineException;
+import multilevelexception.exception.SeatBeltNotOnException;
 
 public class Gasoline {
 
-    public void checkCarStatus() throws Exception{
+    public void checkGasolineLevel() throws Exception {
+
         try {
-            Car car = new Car();
-            car.startCar();
-        } catch (LowGasolineException e) {
-            throw new Exception("Caused by checkCarStatus", e);
+            SeatBelt seatBelt = new SeatBelt();
+            seatBelt.checkSeatBelt();
+        } catch (SeatBeltNotOnException e) {
+            throw new LowGasolineException("Caused by checkGasolineLevel", e);
         }
+
     }
 
 }

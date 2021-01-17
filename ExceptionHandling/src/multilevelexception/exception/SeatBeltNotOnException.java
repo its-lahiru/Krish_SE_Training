@@ -2,8 +2,8 @@ package multilevelexception.exception;
 
 public class SeatBeltNotOnException extends Exception {
 
-    public SeatBeltNotOnException(){
-        super("Seat belt is not on");
+    public SeatBeltNotOnException(String s, Exception e) {
+        super(s, e);
     }
 
 }

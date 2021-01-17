@@ -4,13 +4,8 @@ import multilevelexception.exception.DoorNotClosedException;
 
 public class Door {
 
-    public void checkSeatBelt() throws Exception{
-        try {
-            SeatBelt seatBelt = new SeatBelt();
-            seatBelt.checkGasolineLevel();
-        } catch (DoorNotClosedException e){
-            throw new Exception("Caused by checkSeatBelt", e);
-        }
+    public void checkDoor() throws Exception {
+       throw new DoorNotClosedException("Door is not closed!!!!");
     }
 
 }
