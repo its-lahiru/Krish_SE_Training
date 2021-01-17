@@ -19,10 +19,11 @@ public class CheckedException  {
 
     public void checkedException() {
         try {
-            FileInputStream fileInputStream = new FileInputStream("C:/Users/awlsa/Desktop/Virtusa LP training/ExceptionHandling/src/CheckedException/TextFile.txt");
+            new FileInputStream("C:/Users/awlsa/Desktop/Virtusa LP training/ExceptionHandling/src/CheckedException/TextFile1.txt");
             System.out.println("File found");
         } catch (FileNotFoundException e){
-            System.out.println("Checked exception caused by checkedException");
+            System.out.println("file is not found");
+            System.err.println(e);
         }
 
     }
