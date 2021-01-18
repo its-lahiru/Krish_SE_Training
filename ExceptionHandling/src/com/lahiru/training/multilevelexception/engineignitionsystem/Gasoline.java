@@ -5,7 +5,7 @@ import com.lahiru.training.multilevelexception.exception.SeatBeltNotOnException;
 
 public class Gasoline {
 
-    public void checkGasolineLevel() throws Exception {
+    public void checkGasolineLevel() throws LowGasolineException {
 
         try {
             SeatBelt seatBelt = new SeatBelt();

@@ -5,7 +5,7 @@ import com.lahiru.training.multilevelexception.exception.SeatBeltNotOnException;
 
 public class SeatBelt{
 
-    public void checkSeatBelt() throws Exception {
+    public void checkSeatBelt() throws SeatBeltNotOnException {
 
         try {
             Door door = new Door();

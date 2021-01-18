@@ -2,9 +2,9 @@ package com.lahiru.training.multilevelexception.engineignitionsystem;
 
 import com.lahiru.training.multilevelexception.exception.CarIsNotStartedException;
 
-public class Application {
+public class CarIgnitionSystem {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         try {
             Car car = new Car();
             car.startCar();
@@ -12,4 +12,5 @@ public class Application {
             e.printStackTrace();
         }
     }
+
 }
