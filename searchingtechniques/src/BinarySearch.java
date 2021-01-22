@@ -1,5 +1,3 @@
-package com.lahiru.training.javabasics.datastructures.searchingtechniques;
-
 import java.lang.reflect.Array;
 import java.util.Arrays;
 

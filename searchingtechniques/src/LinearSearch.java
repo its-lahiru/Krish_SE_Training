@@ -1,5 +1,3 @@
-package com.lahiru.training.javabasics.datastructures.searchingtechniques;
-
 public class LinearSearch {
 
     static int linearSearch(int[] array, int key){
