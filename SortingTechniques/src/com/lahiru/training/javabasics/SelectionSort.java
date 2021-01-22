@@ -1,4 +1,4 @@
-package com.lahiru.training.javabasics.datastructures.sortingtechniques;
+package com.lahiru.training.javabasics;
 
 public class SelectionSort {
 
