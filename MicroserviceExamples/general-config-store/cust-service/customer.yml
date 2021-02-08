@@ -1,0 +1,10 @@
+customer:
+ buy:
+  min: 7
+  max: 30
+ price:
+  discount: 3
+product:
+ default:
+  item: rice
+duration: all

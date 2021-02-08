@@ -1,0 +1,10 @@
+cutomer:
+ buy:
+  min: 5
+  max: 40
+ price:
+  discount: 3.5
+product:
+ default:
+  item: rice
+duration: all
