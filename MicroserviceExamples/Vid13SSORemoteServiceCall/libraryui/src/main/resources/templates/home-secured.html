@@ -20,6 +20,43 @@
             <button type="submit" class="btn btn-primary">Get All Students</button>
         </form>
     </div>
+
+    <div th:unless="${error==null}">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Status Code</td>
+                <td>Error</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><span th:text="${error.statusCode}"></span></td>
+                <td><span th:text="${error.body}"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:if="${error==null}">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Name</td>
+                <td>Faculty</td>
+                <td>Age</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student: ${students}">
+                <td><span th:text="${student.getName()}"></span></td>
+                <td><span th:text="${student.getFaculty()}"></span></td>
+                <td><span th:text="${student.getAge()}"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->

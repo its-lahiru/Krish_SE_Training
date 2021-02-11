@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
@@ -48,10 +49,17 @@ public class UIController extends WebSecurityConfigurerAdapter {
         httpHeaders.add("Authorization", AccessToken.getAccessToken());
 
         HttpEntity<Student> studentHttpEntity = new HttpEntity<>(httpHeaders);
-        ResponseEntity<Student[]> responseEntity = restTemplate.exchange("http://localhost:8181/services/students",
-                HttpMethod.GET, studentHttpEntity, Student[].class);
 
-        model.addAttribute("students", responseEntity.getBody());
+        try {
+            ResponseEntity<Student[]> responseEntity = restTemplate.exchange("http://localhost:8181/services/students",
+                    HttpMethod.GET, studentHttpEntity, Student[].class);
+            model.addAttribute("students", responseEntity.getBody());
+        } catch (HttpStatusCodeException e){
+            ResponseEntity responseEntity = ResponseEntity.status(e.getRawStatusCode()).headers(e.getResponseHeaders())
+                    .body(e.getResponseBodyAsString());
+            model.addAttribute("error", responseEntity);
+        }
+
 
         return "home-secured";
     }
