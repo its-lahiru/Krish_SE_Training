@@ -1,9 +1,8 @@
 package com.lahiru.training.studentservice.controller;
 
-import com.lahiru.training.librarycloud.commons.model.Student;
+import com.lahiru.training.librarycloud.commons.model.student.Student;
 import com.lahiru.training.studentservice.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

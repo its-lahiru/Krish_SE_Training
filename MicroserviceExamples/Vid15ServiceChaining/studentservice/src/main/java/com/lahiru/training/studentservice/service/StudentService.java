@@ -1,6 +1,6 @@
 package com.lahiru.training.studentservice.service;
 
-import com.lahiru.training.librarycloud.commons.model.Student;
+import com.lahiru.training.librarycloud.commons.model.student.Student;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.lahiru.training.studentservice.repository;
 
-import com.lahiru.training.librarycloud.commons.model.Student;
+import com.lahiru.training.librarycloud.commons.model.student.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
